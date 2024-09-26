@@ -214,8 +214,8 @@ public class CalculadoraFrame extends JFrame {
 			break;
 			
 		case "POTENCIA":
-			n1=Double.parseDouble(op1);
-			resultado=n1*n1;
+			n1=Double.parseDouble(lbDisplay.getText());
+			resultado=Math.pow(n1,2);
 			display=Double.toString(resultado);
 			lbDisplay.setText(display);
 			limparOperacao();
@@ -236,6 +236,7 @@ public class CalculadoraFrame extends JFrame {
 			lbDisplay.setText(display);
 			break;
 		case "PONTO":
+			atualizarDisplay(".");
 			break;
 		}
 
