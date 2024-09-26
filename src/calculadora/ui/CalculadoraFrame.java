@@ -1,6 +1,5 @@
 package calculadora.ui;
 
-import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -26,21 +25,21 @@ public class CalculadoraFrame extends JFrame {
 	double resultado=0;
 	String display;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					CalculadoraFrame frame = new CalculadoraFrame();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+//	/**
+//	 * Launch the application.
+//	 */
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					CalculadoraFrame frame = new CalculadoraFrame();
+//					frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
 
 	/**
 	 * Create the frame.
@@ -96,14 +95,6 @@ public class CalculadoraFrame extends JFrame {
 			}
 		});
 	}
-
-	public JLabel getLbDisplay() {
-		return lbDisplay;
-	}
-
-	public void setLbDisplay(JLabel display) {
-		this.lbDisplay = display;
-	}
 	//metodo que permite modificar o valor do label Display
 	//acionado através da subclasse
 	public void atualizarDisplay(String digito) {
@@ -158,9 +149,8 @@ public class CalculadoraFrame extends JFrame {
 				op1=lbDisplay.getText();
 				operacao="MULTIPLICAR";
 				break;
-				}		
-			}
-	
+				}
+	}
 	public void resultadoOperacao() {
 		switch (operacao) {
 		case "SOMAR":
@@ -241,4 +231,4 @@ public class CalculadoraFrame extends JFrame {
 		}
 
 	}
-	}
+}
